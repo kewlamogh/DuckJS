@@ -35,9 +35,15 @@ class Duck {
         let func = f;
         if (typeof f == "string") {
             func = () => {
-                eval(f)
-            }
+                eval(f);
+            };
         }
-        el.addEventListener(evt, f)
+        el.addEventListener(evt, f);
+    }
+    setAttr(el, prop, val) {
+        el[prop] = val;
+    }
+    getAttr(el, prop) {
+        return el[prop];
     }
 }
