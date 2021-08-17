@@ -12,8 +12,13 @@ let duck = new Duck({
 })
 
 duck.newElement("a", {
-    "href": "https://replit.com"
+    "href": "https://replit.com",
+    "id": "anchor"
 }, "{{maintext}} {{random number}} is a random number. Click here!", {
     "text-decoration": "none",
     "color": "blue"
 })
+
+duck.on("click", duck.id("anchor"), () => {
+    console.log("Lol.")
+});

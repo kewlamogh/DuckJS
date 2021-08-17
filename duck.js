@@ -18,9 +18,26 @@ class Duck {
         for (var i in attrs) {
             newElement[i] = attrs[i];
         }
-        newElement.innerText = editedComponent;
 
-        console.log(newElement.href)
+        for (var i in styles) {
+            newElement.style[i] = styles[i];
+        }
+
+        newElement.innerText = editedComponent;
         this.parent.appendChild(newElement);
+    }
+
+    id(id) {
+        return document.getElementById(id)
+    }
+
+    on(evt, el, f) {
+        let func = f;
+        if (typeof f == "string") {
+            func = () => {
+                eval(f)
+            }
+        }
+        el.addEventListener(evt, f)
     }
 }
