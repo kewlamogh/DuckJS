@@ -46,4 +46,7 @@ class Duck {
     getAttr(el, prop) {
         return el[prop];
     }
+    delAttr(el, prop) {
+        delete el[prop]
+    }
 }

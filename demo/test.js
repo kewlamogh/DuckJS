@@ -13,12 +13,15 @@ let duck = new Duck({
 
 duck.newElement("a", {
     "href": "https://replit.com",
-    "id": "anchor"
+    "id": "anchor",
+    "target": "_blank"
 }, "{{maintext}} {{random number}} is a random number. Click here!", {
     "text-decoration": "none",
     "color": "blue"
 })
 
-duck.on("click", duck.id("anchor"), () => {
-    console.log("Lol.")
+duck.on("click", duck.id("anchor"), async () => {
+    console.log("You went to replit.com BECAUSE OF MY A.");
+    await new Promise(resolve => setTimeout(resolve, 20));
+    duck.delAttr(duck.id("anchor"), "href")
 });
