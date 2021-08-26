@@ -18,7 +18,9 @@ duck.newElement("a", {
 }, "{{maintext}} {{random number}} is a random number. Click here!", {
     "text-decoration": "none",
     "color": "blue"
-})
+});
+
+duck._interactWithFlask("yeeterusmcyeetface")
 
 duck.on("click", duck.id("anchor"), async () => {
     console.log("You went to replit.com BECAUSE OF MY A.");

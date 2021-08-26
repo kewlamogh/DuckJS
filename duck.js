@@ -7,6 +7,11 @@ class Duck {
         }
         this.config = config
         this.vars = config.vars
+        this.newElement("div", {
+            "id": "_flaskInteractionEnv"
+        }, "", {
+            "display": "none"
+        });
     }
     newElement(elem, attrs, text, styles = this.config) {
         let editedComponent = text;
@@ -47,6 +52,9 @@ class Duck {
         return el[prop];
     }
     delAttr(el, prop) {
-        delete el[prop]
+        delete el[prop];
+    }
+    _interactWithFlask(data) {
+        this.id("_flaskInteractionEnv").innerHTML += data + "24q57831";
     }
 }
