@@ -54,7 +54,7 @@ class Duck {
     delAttr(el, prop) {
         delete el[prop];
     }
-    _interactWithFlask(data) {
-        this.id("_flaskInteractionEnv").innerHTML += data + "24q57831";
+    _interactWithFlask(key, data) {
+        this.id("_flaskInteractionEnv").innerHTML += key+"|"+data + "24q57831";
     }
 }
